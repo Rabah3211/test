@@ -48,9 +48,8 @@ class MyCima : MainAPI() {
     }
     override val mainPage = mainPageOf(
             "$mainUrl/movies/" to "Top Movies",
-            "$mainUrl/seriestv/" to "Top Series",
-            "$mainUrl/category/مسلسلات/10-مسلسلات-تركية-turkish-series/" to "Turkish Series",
-            "$mainUrl/category/مسلسلات/13-مسلسلات-عربيه-arabic-series/" to "Arabic Series",
+            "$mainUrl/category/مسلسلات/10-مسلسلات-تركية-turkish-series/" to "Recently Added Movies",
+            "$mainUrl/seriestv/top/page/0" to "Top Series",
     )
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
