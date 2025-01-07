@@ -12,7 +12,7 @@ import android.util.Log
 
 class MyCima : MainAPI() {
     override var lang = "ar"
-    override var mainUrl = "https://wemycema.shop"
+    override var mainUrl = "https://wecima.stream"
     override var name = "MyCima"
     override val usesWebView = false
     override val hasMainPage = true
@@ -47,9 +47,10 @@ class MyCima : MainAPI() {
         )
     }
     override val mainPage = mainPageOf(
-            "$mainUrl/movies/top/page/0" to "Top Movies",
-            "$mainUrl/movies/recent/page/0" to "Recently Added Movies",
-            "$mainUrl/seriestv/top/page/0" to "Top Series",
+            "$mainUrl/movies/" to "Top Movies",
+            "$mainUrl/seriestv/" to "Top Series",
+            "$mainUrl/category/مسلسلات/10-مسلسلات-تركية-turkish-series/" to "Turkish Series",
+            "$mainUrl/category/مسلسلات/13-مسلسلات-عربيه-arabic-series/" to "Arabic Series",
     )
 
     override suspend fun getMainPage(page: Int, request : MainPageRequest): HomePageResponse {
